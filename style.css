@@ -790,6 +790,18 @@ html {
 
   /* END COMPONENTS */
 
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
   /* HEADER */
 
   .header-menu-toggle {

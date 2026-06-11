@@ -1,13 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-  <link rel="shortcut icon" href="" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marmitaria Amor e Sabor</title>
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+      <link rel="shortcut icon" href="imagens/panela-branca.ico" type="image/x-icon">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marmitaria Amor e Sabor</title>
+  </head>
+  <body style="height: 100%">
+    <!-- HEADER -->
+    <header class="header">
+      <h1 class="header-title">Amor e <span>Sabor</span></h1>
+      <ul class="header-menus">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menus">Menus</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="header-menu-toggle">
+        <i class="bx bx-menu"></i>
+        <i class="bx bx-x"></i>
+      </div>
+    </header>
+
+    <!-- SECTION: HOME -->
+    <section id="home" class="section-home section-menu">
+      <div class="section-home-content">
+        <h1 class="section-home-title">
+          Bem-vindo ao <span>Amor e Sabor,</span>
+          sua satisfação é nosso lema!
+        </h1>
+        <div class="section-home-btns">
+          <a class="primary-btn" href="https://wa.me/556791985546" target="_blank">Entre em Contato</a>
+          <button class="light-btn hover-icon-right" id="explore-btn">
+            Explorar
+            <i class="bx bx-right-arrow-alt"></i>
+          </button>
+        </div>
+      </div>
+      <img
+        class="section-home-img"
+        src="imagens/prato-brasileiro.png"
+        alt="Prato arroz, bife e batata frita" />
+    </section>
+    <!-- END SECTION: HOME -->
+
+    <!-- SECTION: MENUS -->
+  <section class="section-menus section-menu" id="menus">
+  <h1 class="section-title">Nosso <span>Cardápio</span></h1>
+  <p class="section-text">Acompanhe o prato do dia, novidades e promoções através dos stories do nosso Instagram!</p>
+
+  <!-- ==================== -->
+  <!-- FEED DO INSTA (ELFSIGHT) -->
+  <!-- ==================== -->
   
-</body>
+
+<script src="https://elfsightcdn.com/platform.js" async></script>
+
+<div class="elfsight-container">
+  <div class="elfsight-app-f02b5b2c-bd17-475e-bf59-8f5ea545d498" data-elfsight-app-lazy></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      if (typeof ScrollReveal !== 'undefined') {
+        ScrollReveal().reveal('.elfsight-container', {
+          delay: 600,
+          duration: 2500,
+          distance: '30px',
+          origin: 'bottom'
+        });
+      }
+    }, 500);
+  });
+</script>
+
+  <!-- ==================== -->
+  <!-- CONTEÚDO SALGADOS -->
+  <!-- ==================== -->
+  
+  <!-- SALGADOS INDIVIDUAIS -->
+<div class="cardapio-container">
+  <h3 class="subtitle-salgados">🍢 Salgados individuais</h3>
+  
+  <div class="cardapio-grid" id="cardapioSalgados">
+    <div class="salgados-card">
+      <img class="salgados-imgs" src="imagens/coxinha.jpg" alt="Coxinha">
+      <p>Coxinha de carne<span>R$6,50</span></p>
+      <p>Coxinha de frango com catupiry<span>R$7,70</span></p>
+    </div>
+    
+    <div class="salgados-card">
+      <img class="salgados-imgs" src="imagens/esfiha.jpg" alt="Esfiha">
+      <p>Esfiha de carne<span>R$7,00</span></p>
+    </div>
+    
+    <div class="salgados-card">
+      <img class="salgados-imgs" src="imagens/chipa.jpg" alt="Chipa">
+      <p>Chipa de queijo<span>R$7,80</span></p>
+    </div>
+    
+    <div class="salgados-card" id="risoles-card">
+      <img class="salgados-imgs" src="imagens/risoles.jpg" alt="Risoles">
+      <p>Risoles de carne<span>R$6,50</span></p>
+      <p>Risoles de frango<span>R$7,00</span></p>
+    </div>
+  </div>
+</div>
+
+  <!-- CENTOS DE SALGADOS (seção separada) -->
+  <div class="centos-container">
+    <h3 class="subtitle-centos">🎉 Centos de salgados (encomenda)</h3>
+    <div class="centos-grid">
+      <div class="cento-card">
+        <h4>Cento de Coxinha</h4>
+        <p>100 unidades - sabor frango com catupiry</p>
+        <div class="price">R$ 70,00</div>
+        <a href="https://wa.me/556791985546" target="_blank">Encomendar</a>
+      </div>
+      <div class="cento-card">
+        <h4>Cento de Salgados variados</h4>
+        <p>100 unidades (coxinha, empada, kibe, rissole)</p>
+        <div class="price">R$ 75,00</div>
+        <a href="https://wa.me/556791985546" target="_blank">Encomendar</a>
+      </div>
+      <div class="cento-card">
+        <h4>Cento de Empada</h4>
+        <p>100 unidades - sabor frango</p>
+        <div class="price">R$ 80,00</div>
+       <a href="https://wa.me/556791985546" target="_blank">Encomendar</a>
+      </div>
+    </div>
+    <p class="obs">📌 Encomendas de cento com 48h de antecedência. Consulte sabores disponíveis.</p>
+  </div>
+</div>
+<!-- CARROSSEL DE FOTOS DIVERSAS -->
+<div class="carrossel-container">
+  <h3 class="carrossel-title">📸 Delícias que já preparamos</h3>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="imagens/mini-hamburgueres.jpg" alt="Mini hamburgueres" />
+      </div>
+      <div class="swiper-slide">
+        <img src="imagens/aboboras-recheadas.jpg" alt="Áboboras recheadas" />
+      </div>
+      <div class="swiper-slide">
+        <img src="imagens/churrasco.jpeg" alt="Churrasco" />
+      </div>
+      <div class="swiper-slide">
+        <img src="imagens/cento-vertical.jpg" alt="Cento de salgados" />
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+   <p class="obs obs-foto">🖼️ Tire sua foto e marque nosso Instagram: @amoresabor_maracajums</p>
+</div>
+</section>
+    <!-- END SECTION: MENUS -->
+
+    <!-- SECTION: ABOUT -->
+    <section id="sobre" class="section-about section-menu">
+      <img class="section-about-img" src="imagens/pasta.png" alt="Pasta" />
+      <div class="sections-about-content">
+        <h1 class="section-title">Sobre <span>Nós</span></h1>
+        <p class="sction-desc">
+          Amor e Sabor nasceu como projeto indivídual de uma mulher dedicada à cozinha e ao constante aperfeiçoamento não apenas a si mas também aos seus clientes, pilares de sua trajetória profissional. <br>Maire Rodrigues Leão é, desde 2009, cozinheira que traz extensa especialidade em diversos pratos e massas tanto em restaurantes quanto em eventos de requinte.
+        </p>
+        <div class="section-about-stats">
+          <div class="section-about-stat">
+            <h1 class="section-about-stat-number">+17</h1>
+            <div class="section-about-stat-text">
+              <span class="section-about-stat-desc"> Anos de</span>
+              <h3 class="section-about-stat-title">EXPERIÊNCIA</h3>
+            </div>
+          </div>
+          <div class="section-about-stat">
+            <h1 class="section-about-stat-number">10</h1>
+            <div class="section-about-stat-text">
+              <span class="section-about-stat-desc"> Melhores</span>
+              <h3 class="section-about-stat-title">PRATOS</h3>
+            </div>
+          </div>
+        </div>
+        <a class="primary-link hover-icon" href="https://www.instagram.com/amoresabor_maracajums/" target="_blank">
+          Aprenda mais
+          <i class="bx bx-right-arrow-alt"></i>
+        </a>
+      </div>
+    </section>
+    <!-- END SECTION: ABOUT -->
+
+    <!-- SECTION: SERVICES -->
+    <section class="section-services section-menu" id="servicos">
+      <h1 class="section-title">Nossos <span>serviços</span></h1>
+      <p class="section-desc">
+        Alguns dos serviços de qualidade oferecidos por nosso estabelecimento
+      </p>
+      <div class="section-services-cards">
+        <div class="section-services-card">
+          <div class="section-services-card-icon">
+            <i class="bx bx-bowl-hot"></i>
+          </div>
+          <h1 class="section-services-card-title">Almoço</h1>
+          <p>
+            Oferecemos marmitas individuais com pratos variados, trocando diariamente. Comida caseira de verdade, com acompanhamentos tradicionais e preço justo.
+          </p>
+        </div>
+        <div class="section-services-card">
+          <div class="section-services-card-icon">
+            <i class="bx bx-package"></i>
+          </div>
+          <h1 class="section-services-card-title">Delivery</h1>
+          <p>
+         Fazemos entregas em toda Maracaju. Peça pelo WhatsApp e receba sua marmita quentinha na hora do almoço. Cobramos taxa de entrega.
+          </p>
+        </div>
+        <div class="section-services-card">
+          <div class="section-services-card-icon">
+            <i class="bx bx-calendar-event"></i>
+          </div>
+          <h1 class="section-services-card-title">Evento e Categoria</h1>
+          <p>
+            Salgados e centos para festas, reuniões e eventos. Encomendas com 48h de antecedência. Entre em contato conosco e consulte sabores e valores.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION: END SERVICES -->
+
+    <!-- SECTION: CONTACT -->
+    <section class="section-contact section-menu" id="contato">
+      <div class="section-contact-info">
+        <h1 class="section-title">Entre em <span>Contato</span></h1>
+        <p class="section-desc">
+          Quer saber o cardápio do dia? Precisa de um cento de salgados para sua festa? Mande uma mensagem! Respondemos de segunda a sábado, das 8h às 18h.
+        </p>
+        <div class="section-contact-info-items">
+          <div class="section-contact-info-item">
+            <div class="section-contact-info-item-icon">
+              <i class="bx bxs-location-plus"></i>
+            </div>
+            <a class="section-contact-info-item-link" href="https://share.google/XwD3fqcslRmSLANlC" target="_blank">
+              Querubina UP de Lima, 420, Vila Margarida, Maracaju - MS
+            </a>
+          </div>
+        </div>
+        <div class="section-contact-info-items">
+          <div class="section-contact-info-item">
+            <div class="section-contact-info-item-icon">
+              <i class="bx bxl-instagram"></i>
+            </div>
+            <a class="section-contact-info-item-link" href="https://www.instagram.com/amoresabor_maracajums/" target="_blank">
+              @amoresabor_maracajums
+            </a>
+          </div>
+          <div class="section-contact-info-item">
+            <div class="section-contact-info-item-icon">
+              <i class="bx bxl-whatsapp"></i>
+            </div>
+            <a class="section-contact-info-item-link" href="https://wa.me/556791985546">67 99198556</a>
+          </div>
+        </div>
+      </div>
+      <form class="section-contact-form" action="https://formspree.io/f/mzdqbrnb" method="POST" target="_blank">
+  <input type="text" name="nome" class="text-field" placeholder="Seu nome" required />
+  <input type="email" name="email" class="text-field" placeholder="Email" required />
+  <input type="tel" name="telefone" class="text-field" placeholder="Telefone" />
+  <textarea name="mensagem" class="text-field text-field-textarea" placeholder="Mensagem" rows="5" required></textarea>
+  <button type="submit" class="section-contact secondary-btn">Enviar mensagem</button>
+</form>
+    </section>
+    <!-- SECTION: END CONTACT -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <h1 class="footer-title">Amor e <span>Sabor</span></h1>
+      <ul class="footer-menus">
+        <li class="footer-menus-menu"><a href="#home">Home</a></li>
+        <li class="footer-menus-menu"><a href="#menus">Menus</a></li>
+        <li class="footer-menus-menu"><a href="#sobre">Sobre</a></li>
+        <li class="footer-menus-menu"><a href="#servicos">Serviços</a></li>
+        <li class="footer-menus-menu"><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="footer-divider"></div>
+      <p class="footer-copyright">
+        &copy; 2026 Amor e Sabor. Todos os direitos reservados. | Feito por
+        <a
+          class="footer-link-a"
+          href="https://www.instagram.com/kosmos_agenciadigital/"
+          target="_blank"
+          >Kosmos - Agência Digital
+          <img
+            class="footer-link-img"
+            src="imagens/kosmos-favicon.png"
+            alt="Kosmos PNG"
+        /></a>
+      </p>
+    </footer>
+    <!-- END FOOTER -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

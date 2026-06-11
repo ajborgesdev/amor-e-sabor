@@ -863,6 +863,23 @@ html {
     width: 100%;
   }
 
+  .salgados-imgs {
+    height: 330px;
+  }
+
+  .salgados-card,
+  .section-menus-card,
+  .cento-card {
+    width: 100%;
+    min-width: 180px;
+    max-width: 280px;
+  }
+
+  .cardapio-grid {
+    gap: 1rem;
+    justify-content: center;
+  }
+
   /* END SECTION HOME */
 
   /* SECTION ABOUT */

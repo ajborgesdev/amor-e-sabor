@@ -1,15 +1,3 @@
-// ====================
-// MENU TOGGLE (MOBILE)
-// ====================
-const headerMenuToggle = document.querySelector('.header-menu-toggle');
-const headerMenus = document.querySelector('.header-menus');
-
-if (headerMenuToggle && headerMenus) {
-  headerMenuToggle.addEventListener('click', () => {
-    headerMenus.classList.toggle('active');
-  });
-}
-
 const exploreBtn = document.getElementById('explore-btn');
 const sectionCardapio = document.getElementById('menus');
 
@@ -109,55 +97,68 @@ ScrollReveal().reveal('.section-contact-form', {
   duration: 3000
 });
 
-// ===========
-// MENU MOBILE 
-// ===========
 const menu = document.querySelector('.header-menus');
 const botao = document.querySelector('.header-menu-toggle');
 const iconMenu = document.querySelector('.bx-menu');
 const iconClose = document.querySelector('.bx-x');
 
-menu.classList.remove('active');
-menu.style.display = 'none';
-iconMenu.style.display = 'inline';
-iconClose.style.display = 'none';
-
+// ========== FUNÇÕES ==========
 function abrirMenu() {
-  menu.classList.add('active');
-  menu.style.display = 'flex';
+  menu.classList.add('ativo');
   iconMenu.style.display = 'none';
   iconClose.style.display = 'inline';
 }
 
 function fecharMenu() {
-  menu.classList.remove('active');
-  menu.style.display = 'none';
+  menu.classList.remove('ativo');
   iconMenu.style.display = 'inline';
   iconClose.style.display = 'none';
 }
 
-botao.addEventListener('click', (evento) => {
+// ========== BOTÃO (USA TOGGLE) ==========
+botao.onclick = function (evento) {
   evento.stopPropagation();
-  if (menu.style.display === 'flex') {
-    fecharMenu();
-  } else {
-    abrirMenu();
-  }
-});
 
-document.addEventListener('click', (evento) => {
-  if (menu.style.display === 'flex') {
+  // Alterna a classe active
+  menu.classList.toggle('ativo');
+
+  // Atualiza os ícones baseado no estado atual
+  if (menu.classList.contains('ativo')) {
+    iconMenu.style.display = 'none';
+    iconClose.style.display = 'inline';
+  } else {
+    iconMenu.style.display = 'inline';
+    iconClose.style.display = 'none';
+  }
+};
+
+// ========== FECHA AO CLICAR FORA ==========
+document.onclick = function (evento) {
+  if (menu.classList.contains('ativo')) {
     const cliqueNoMenu = menu.contains(evento.target);
     const cliqueNoBotao = botao.contains(evento.target);
     if (!cliqueNoMenu && !cliqueNoBotao) {
-      fecharMenu();
+      menu.classList.remove('ativo');
+      iconMenu.style.display = 'inline';
+      iconClose.style.display = 'none';
     }
   }
+};
+
+// ========== LINKS ==========
+menu.querySelectorAll('a').forEach(function (link) {
+  link.onclick = function () {
+    menu.classList.remove('ativo');
+    iconMenu.style.display = 'inline';
+    iconClose.style.display = 'none';
+  };
 });
 
-menu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', fecharMenu);
-});
+// ========== INICIALIZAÇÃO ==========
+// Garante que o menu comece fechado
+menu.classList.remove('ativo');
+iconMenu.style.display = 'inline';
+iconClose.style.display = 'none';
 
 // ====================
 // INICIALIZAÇÃO DO CARROSSEL SWIPER

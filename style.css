@@ -804,45 +804,47 @@ html {
 
   /* HEADER */
 
-  .header-menu-toggle {
-    display: block;
-    font-size: 3rem;
-    cursor: pointer;
-  }
+ .header-menu-toggle {
+  display: block;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 1001;
+}
 
-  .header-menu-toggle .bx-x {
-    display: none;
-  }
+.header-menu-toggle .bx-x {
+  display: none;
+}
 
-  .header-menus {
-    position: absolute;
-    top: 100px;
-    background: linear-gradient(
-      to right,
-      white,
-      var(--background-primary-color)
-    );
-    flex-direction: column;
-    width: 100%;
-    left: 0;
-    padding-inline-start: 5%;
-    height: 0;
-    overflow: hidden;
-    transition: 300ms ease;
-  }
+.header-menus {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 0;
 
-  .header-menus.active {
-    height: 300px;
-    padding-block: 24px;
-  }
+  align-items: center;
+  width: 100%;
+  height: 0;
+  padding-inline-start: 5%;
+  background: linear-gradient(to right, white, var(--background-primary-color));
+  flex-direction: column;
+  overflow: hidden;
+  transition: 300ms ease;
+  list-style: none;
+}
 
-  .header-menus.active ~ .header-menu-toggle .bx-menu {
-    display: none;
-  }
+.header-menus.active {
+  display: flex;
+  height: 300px;
+  padding-block: 24px;
+}
 
-  .header-menus.active ~ .header-menu-toggle .bx-x {
-    display: block;
-  }
+.header-menus.active ~ .header-menu-toggle .bx-menu {
+  display: none;
+}
+
+.header-menus.active ~ .header-menu-toggle .bx-x {
+  display: inline;
+}
 
   /* END HEADER */
 

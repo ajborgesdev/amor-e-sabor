@@ -27,7 +27,7 @@ O **Amor e Sabor** é um site institucional desenvolvido para uma marmitaria loc
 ## 🖥️ Funcionalidades
 
 - **Menu hambúrguer**: Navegação responsiva para dispositivos móveis, com fechamento ao clicar fora do menu.
-- **Cardápio semanal**: Exibição organizada dos pratos do dia, com pratos fixos e alternância por abas.
+- **Cardápio diário**: Exibição organizada dos pratos do dia por meio do widget do Instagram.
 - **Seção de salgados**: Grade de produtos com preços e botão de pedido via WhatsApp.
 - **Carrossel automático**: Galeria de imagens com rolagem automática (Swiper.js), destacando fotos de eventos e produtos.
 - **Feed do Instagram**: Integração com o Instagram para exibição dos posts mais recentes, incentivando o cliente a acompanhar as novidades.
@@ -38,7 +38,7 @@ O **Amor e Sabor** é um site institucional desenvolvido para uma marmitaria loc
 
 ## 🎨 Design e identidade visual
 
-- Paleta de cores personalizada, com tons de vermelho, dourado e bege, transmitindo aconchego e identidade de marca.
+- Paleta de cores personalizada, com tons de vermelho, rosa e bege, transmitindo aconchego e identidade de marca.
 - Tipografia moderna e legível, com fontes do Google Fonts.
 
 ## 🔧 Como testar o projeto

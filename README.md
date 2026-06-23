@@ -45,7 +45,7 @@ O **Amor e Sabor** é um site institucional desenvolvido para uma marmitaria loc
 
 Você pode acessar o site no ar através do link abaixo:
 
-🔗 **[Acessar Amor e Sabor](https://amoresabor.vercel.app/)**
+🔗 **[Acessar Amor e Sabor](https://amoresabormarmitaria.vercel.app/)**
 
 Ou, se preferir rodar localmente:
 

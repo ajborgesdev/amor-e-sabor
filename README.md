@@ -1,7 +1,6 @@
 # Amor e Sabor - Site Institucional para Marmitaria
 
-![Preview do Site](preview/imagens/banner-amoresabor.png)  
-*(Adicione aqui uma imagem de capa do seu site)*
+![Preview do Site](imagens/banner-amoresabor.png)  
 
 Projeto desenvolvido para uma marmitaria real, com foco em praticar JavaScript Vanilla, manipulação do DOM e integração com ferramentas externas (Instagram e Swiper). O site foi criado para ser uma vitrine digital simples, funcional e de fácil manutenção para o negócio.
 
